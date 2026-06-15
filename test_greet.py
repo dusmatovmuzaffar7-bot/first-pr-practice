@@ -1,4 +1,4 @@
-from greet import greet, farewell
+from greet import greet, farewell, good_morning
 
 
 def test_greet_default():
@@ -15,3 +15,11 @@ def test_farewell_default():
 
 def test_farewell_with_name():
     assert farewell("Alice") == "Goodbye, Alice!"
+
+
+def test_good_morning_default():
+    assert good_morning() == "Good morning, World!"
+
+
+def test_good_morning_with_name():
+    assert good_morning("Alice") == "Good morning, Alice!"
