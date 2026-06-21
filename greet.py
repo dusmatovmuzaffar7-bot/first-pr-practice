@@ -6,6 +6,11 @@ def farewell(name="World"):
     return f"Goodbye, {name}!"
 
 
+def good_morning(name="World"):
+    return f"Good morning, {name}!"
+
+
 if __name__ == "__main__":
     print(greet())
     print(farewell())
+    print(good_morning())
