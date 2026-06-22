@@ -1,3 +1,6 @@
+import random
+
+
 def greet(name="World"):
     return f"Hello, {name}!"
 
@@ -10,8 +13,12 @@ def good_morning(name="World"):
     return f"Good morning, {name}!"
 
 
+BYE_PHRASES = ["Bye", "See you", "Take care", "Farewell"]
+
+
 def bye(name="World"):
-    return f"Bye, {name}!"
+    phrase = random.choice(BYE_PHRASES)
+    return f"{phrase}, {name}!"
 
 
 if __name__ == "__main__":

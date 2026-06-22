@@ -1,4 +1,4 @@
-from greet import greet, farewell, good_morning, bye
+from greet import greet, farewell, good_morning, bye, BYE_PHRASES
 
 
 def test_greet_default():
@@ -26,8 +26,12 @@ def test_good_morning_with_name():
 
 
 def test_bye_default():
-    assert bye() == "Bye, World!"
+    result = bye()
+    assert result.endswith(", World!")
+    assert result.split(",")[0] in BYE_PHRASES
 
 
 def test_bye_with_name():
-    assert bye("Alice") == "Bye, Alice!"
+    result = bye("Alice")
+    assert result.endswith(", Alice!")
+    assert result.split(",")[0] in BYE_PHRASES
